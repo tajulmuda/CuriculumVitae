@@ -1,0 +1,131 @@
+html {
+    scroll-behavior: smooth; /* Menambahkan smooth scroll */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    color: #333;
+}
+.main-content {
+    flex: 1; /* Konten utama mengambil ruang yang tersisa */
+    padding: 20px;
+    background-color: #ffffff; /* Warna latar belakang konten utama */
+}
+header, nav, section {
+    margin-bottom: 20px; /* Jarak antar elemen */
+}
+.main-content h1 {
+    color: rgb(0, 0, 0);
+}
+.main-content h2 {
+    color: rgb(0, 0, 0);
+}
+.main-content h3 {
+    color: rgb(0, 0, 0);
+}
+
+.main-content p {
+    color: rgb(0, 0, 0);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+}
+
+/* Header */
+header {
+    background:#ffffff;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+header h1 {
+    font-size: 3em;
+    margin: 0;
+}
+header p {
+    font-size: 1.2em;
+}
+
+/* Navigasi */
+nav {
+    background-color: #333;
+    padding: 10px 0;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav li {
+    margin: 0 15px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #50E3C2;
+}
+
+/* Bagian Umum */
+section {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+section h2 {
+    border-bottom: 2px solid #4A90E2;
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #4A90E2;
+}
+section p, section ul, section li {
+    margin-bottom: 10px;
+}
+
+/* Daftar Gaya */
+ul {
+    padding-left: 20px;
+}
+li {
+    line-height: 1.6;
+}
+
+/* Gaya Ikon */
+.icon {
+    color: #4A90E2;
+    margin-right: 8px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}
+
+/* Gaya Responsif */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2em;
+    }
+    nav a {
+        font-size: 1em;
+    }
+    section {
+        padding: 15px;
+    }
+}
