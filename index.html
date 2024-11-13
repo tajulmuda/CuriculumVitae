@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Interaktif</title>
+    <link rel="stylesheet" href="view/style.css">
+    <link rel="stylesheet" href="view/sidebar.css">
+    <link rel="stylesheet" href="view/game-style.css">
+    <!-- Include Chart.js for the chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    user-select: none
+    <div class="sidebar">
+        <img src="image/foto-Profile.png" alt="Gambar" style="display: block; margin: 0 auto;width: 200px;height: 300px;border-radius: 50%">
+        <ul>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <img src="logo/phone1.png" alt="Phone" class="contact-icon" />
+                    <span>0813 8477 9571</span>
+                </div>
+                <div class="contact-item">
+                    <img src="logo/Mail1.png" alt="Email" class="contact-icon" />
+                    <span>tajulaulia93@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <img src="logo/Linkedin1.png" alt="LinkedIn" class="contact-icon" />
+                    <span>TajulAuliaMuda</span>
+                </div>
+                <div class="contact-item">
+                    <img src="logo/Instagram1.png" alt="Instagram" class="contact-icon" />
+                    <span>@tajulmuda</span>
+                </div>
+            </div>  
+        </ul>
+        <div class="sidebar-header">
+            <span>Skills</span>
+            <div class="separator"></div>
+        </div>
+        <div class="skills">
+            <ul>
+              <li>Communication</li>
+              <li>Linux</li>
+              <li>Teamwork</li>
+              <li>Organization</li>
+              <li>Quality Insurance</li>
+              <li>Log analysis</li>
+              <li>Database (Certificated)</li>
+            </ul>
+        </div>
+        <div class="sidebar-header">
+            <span>Software</span>
+            <div class="separator"></div>
+        </div>
+        <div class="skills">
+            <ul>
+              <li>Intellij IDEA</li>
+              <li>Oracle</li>
+              <li>SQL Server Management</li>
+              <li>Linux</li>
+              <li>Windows</li>
+              <li>Adobe Illustrator</li>
+              <li>Adobe Photoshop</li>
+              <li>Microsoft Office Product</li>
+              <li>MobaXTerm</li>
+              <li>JIRA</li>
+            </ul>
+        </div>
+        <div class="sidebar-header">
+            <span>AWARDS</span>
+            <div class="separator"></div>
+        </div>
+        <div class="skills">
+            <ul>
+              <li>GOLD MEDAL PICF 2016 ( MIXYOUTH )</li>
+              <li>SILVER MEDAL PICF 2016 ( FOKLORE )</li>
+              <li>CHAMPION MALAYSIAN CE  2017 ( MALE CHOIR )</li>
+              <li>GOLD MEDAL MALAYSIAN CE 2017 ( MIXYOUTH )</li>
+              <li>GOLD MEDAL KARANG TURI 2019 ( MIXYOUTH )</li>
+              <li>CHAMPION  KARANG TURI 2019 ( MALE CHOIR )</li>
+            </ul>
+        </div>
+        <div class="sidebar-header">
+            <span>WIDGET</span>
+            <div class="separator"></div>
+        </div>
+        <div class="skills">
+            <ul>
+                <div class="weather-widget">
+                    <h2 style="color: white;">Jakarta Weather</h2>
+                    <img src="" alt="Weather Icon" class="icon">
+                    <div class="temperature" id="temperature" style="color: white;">-- °C</div>
+                    <div class="description" id="description" style="color: white;">Loading...</div>
+                    <div class="error-message" id="error-message" style="color: wheat;">Gagal memuat data cuaca.</div>
+                </div>   
+                <script src="scriptWeather.js"></script>
+            </ul>
+        </div>
+        <div class="sidebar-header">
+            <span>Money Market</span>
+            <div class="separator"></div>
+        </div>
+        <div class="skills">
+            <ul>
+                
+                <h2 style="color: white;">Money Market</h2>
+                <div class="row mt-5">
+                    <div class="col-md-12">
+                        <canvas id="currencyChart" width="400" height="200"></canvas>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <p><strong>USD/IDR:</strong> <span id="usd-rate">Loading...</span></p>
+                        <p><strong>GBP/IDR:</strong> <span id="gbp-rate">Loading...</span></p>
+                        <p><strong>EUR/IDR:</strong> <span id="eur-rate">Loading...</span></p>
+                        <div class="error-message" id="error-message" style="color: wheat;">Gagal memuat data Money.</div>
+                    </div>
+                </div>
+                <script src="scriptKurs.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1 style="text-align: left;">Tajul Aulia Muda S.T</h1>
+            <h3 style="text-align: left;">IT TECHNICAL CONSULTANT</h3>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#about">Tentang Saya</a></li>
+                <li><a href="#Education">Pengalaman</a></li>
+                <li><a href="#experience">Pendidikan</a></li>
+                <li><a href="#Bachelor's degree">Proyek</a></li>
+                <li><a href="#contact">Kontak</a></li>
+                <li><a href="#game">Game</a></li>
+            </ul>
+        </nav>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+               Saya Tajul Aulia Muda mempunyai niat belajar yang besar dan keingintahuan yang
+               luar biasa. Saya merupakan lahiran Meulaboh Aceh Barat di tahun 1998 saya tamatan 
+               S1 INFORMATIKA INSTITUT TEKNOLOGI PLN JAKARTA tahun 2020. Saya siap untuk 
+               berkembang dan siap untuk belajar dari bawah. Saya pribadi yang menyenangkan 
+               dan serius diwaktu yang seharusnya. Saya baik dalam berkerja sama, berkomunikasi 
+               dalam lingkungan internal maupun eksternal. siap untuk berkembang dan siap untuk 
+               di kritik agar menjadi pribadi yang lebih baik dari sebelumnya.
+            </p>
+        </section>
+
+        <section id="Education">
+            <h2>Education</h2>
+            <table>
+                <tr>
+                  <td>2016 - 2020</td>
+                </tr>
+                <td><h3><img src="logo/LOGO_IT_PLN.png" alt="Gambar" style="display: block; margin: 0 auto;width: 150px;height: 50px;float: left;"></td>
+                <tr>
+                  <td><h4>INSTITUT TEKNOLOGI PLN JAKARTA</h4></td>
+                </tr>
+                <tr>
+                  <td>Jalan lingkar luar barat RT1/RW1 Duri Kosambi Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11750</td>
+                </tr>
+              </table>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="job">
+                <h3>Support Developer</h3>
+                <p><strong>PT. BERLIAN SISTEM INFORMASI</strong> - September 2019 - Desember 2020</p>
+                <ul>
+                    <li>Membantu sisi aplikasi dan user dalam melakukan reporting sales.</li>
+                    <li>Maintenance device.</li>
+                    <li>Backup dan Update Data sesuai kebutuhan Developer saat itu.</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h3>Support Junior Programmer</h3>
+                <p><strong>PT. SENTRA INOVASI SOLUSINDO</strong> - Juni 2021 - Desember 2021</p>
+                <ul>
+                    <li>pengembangan aplikasi Inventory dan POS</li>
+                    <li>Membantu sisi aplikasi dan user dalam melakukan reporting inventory dan stock opname.</li>
+                    <li>Maintenance device.</li>
+                    <li>Backup dan Update Data sesuai kebutuhan user saat itu.</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h3>IT Engineer</h3>
+                <p><strong>PT. MEDIANUSA PERMANA</strong> - Januari 2022 - Juli 2022</p>
+                <ul>
+                    <li>Membantu dalam mempersiapkan environment.</li>
+                    <li>Pengecekan koneksi database dan port aplikasi.</li>
+                    <li>Melakukan bantuan instalasi connector bank participant.</li>
+                    <li>Testing server setelah instalasi.</li>
+                    <li>Testing server setelah instalasi aplikasi, database dan koneksi surrounding.</li>
+                    <li>pengecekan Report dan lakukan backup pada semua kondisi testing DEV,SIT dan UAT</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h3>IT CONSULTANT</h3>
+                <p><strong>PT. ABHIMATA PERSADA</strong> - Juli 2022 - Present</p>
+                <ul>
+                    <li>Analisa pada software (BI - FAST) dan Capability Network.</li>
+                    <li>Consultasi with management dan departement lain sesuai request user.</li>
+                    <li>Meningkatkan e eciency dengan konsultasi dengan end user dan memprovide innovasi dan solusi.</li>
+                    <li>penggunaan FSD dan TSD penggunaan aplikasi.</li>
+                    <li>melakukan resolve jika terdapat log error,melakukan testing (Quality Insurance).</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="Bachelor's degree">
+            <h2>Bachelor's degree</h2>
+            <table>
+                <tr>
+                  <td><img src="image/Ijazah.PNG" alt="Gambar" style="display: block; margin: 0 auto;width: 500px;height: 300px;float: left;"></td>
+                </tr>
+              </table>
+              <a href="pdf/Ijazah.pdf" download="Ijazah.pdf"><button>Download PDF</button></a>
+        </section>
+
+        <section id="Academic Transcript">
+            <h2>Academic Transcript</h2>
+            <table>
+                <tr>
+                  <td><img src="image/Transkip Nilai.PNG" alt="Gambar" style="display: block; margin: 0 auto;width: 400px;height: 500px;float: left;"></td>
+                </tr>
+              </table>
+              <a href="pdf/TRANSKRIP NILAI.pdf" download="Transkrip_nilai.pdf"><button>Download PDF</button></a>
+        </section>
+
+        <section id="GAMELAB PEMROGAMAN DASAR C++">
+            <h2>Certificate - GAMELAB PEMROGAMAN DASAR C++</h2>
+            <table>
+                <tr>
+                  <td><img src="image/C++.PNG" alt="Gambar" style="display: block; margin: 0 auto;width: 500px;height: 300px;float: left;"></td>
+                </tr>
+            </table>
+            <a href="pdf/c++.pdf" download="GAMELAB PEMROGAMAN DASAR C++.pdf"><button>Download PDF</button></a>
+        </section>
+
+        <section id="Training Cloud Computing Indonesia">
+            <h2>Certificate - Training Cloud Computing Indonesia</h2>
+            <table>
+                <tr>
+                  <td><img src="image/Cloud Computing.PNG" alt="Gambar" style="display: block; margin: 0 auto;width: 500px;height: 300px;float: left;"></td>
+                </tr>
+            </table>
+            <a href="pdf/Cloud Computing.pdf" download="HAI BCA Tech competition.pdf"><button>Download PDF</button></a>
+        </section>
+
+        <section id="Microsoft Office Specialist">
+            <h2>Certificate - Microsoft Office Specialist</h2>
+            <table>
+                <tr>
+                  <td><img src="image/Certified 1.PNG" alt="Gambar" style="display: block; margin: 0 auto;width: 500px;height: 300px;float: left;"></td>
+                </tr>
+              </table>
+              <a href="pdf/Office Word 2013_page-0001 - Copy.jpg" download="Certificate - Microsoft Office Specialist.jpg"><button>Download JPG</button></a>
+        </section>
+
+        <section id="Microsoft Technology Assosiate">
+            <h2>Certificate - Microsoft Technology Assosiate</h2>
+            <table>
+                <tr>
+                  <td><img src="image/Certified 2.PNG" alt="Gambar" style="display: block; margin: 0 auto;width: 500px;height: 300px;float: left;"></td>
+                </tr>
+              </table>
+              <a href="pdf/Database Administration Fundamentals _page-0001.jpg" download="Microsoft Technology Assosiate.jpg"><button>Download JGP</button></a>
+        </section>
+
+        <section id="Network Skill Academy Ruang Guru">
+            <h2>Certificate - Network Skill Academy Ruang Guru</h2>
+            <table>
+                <tr>
+                  <td><img src="image/Jaringan.PNG" alt="Gambar" style="display: block; margin: 0 auto;width: 500px;height: 300px;float: left;"></td>
+                </tr>
+              </table>
+              <a href="pdf/pintaria.pdf" download="Network Skill Academy Ruang Guru.pdf"><button>Download PDF</button></a>
+        </section>
+
+        <section id="Course-Net Network Admin and IT Support">
+            <h2>Certificate - Course-Net Network Admin and IT Support</h2>
+            <table>
+                <tr>
+                  <td><img src="image/Network and admin IT.PNG" alt="Gambar" style="display: block; margin: 0 auto;width: 500px;height: 300px;float: left;"></td>
+                </tr>
+                <tr>
+                    <td><img src="image/Penilaian Network and admin IT.PNG" alt="Gambar" style="display: block; margin: 0 auto;width: 500px;height: 300px;float: left;"></td>
+                </tr>
+            </table>
+            <a href="pdf/IT SUpport.pdf" download="Course-Net Network Admin and IT Support.pdf"><button>Download PDF</button></a>
+        </section>
+
+        <section id="Google Technical Support">
+            <h2>Certificate - Google Technical Support</h2>
+            <table>
+                <tr>
+                  <td><img src="image/Technical Support.PNG" alt="Gambar" style="display: block; margin: 0 auto;width: 500px;height: 350px;float: left;"></td>
+                </tr>
+            </table>
+            <a href="pdf/TechnicalSupport.pdf" download="Google Technical Support.pdf"><button>Download PDF</button></a>
+        </section>
+
+        <section id="Participant HAI BCA Tech competition 2021">
+            <h2>Certificate - Participant HAI BCA Tech competition 2021</h2>
+            <table>
+                <tr>
+                  <td><img src="image/Heckathon BCA.PNG" alt="Gambar" style="display: block; margin: 0 auto;width: 500px;height: 350px;float: left;"></td>
+                </tr>
+            </table>
+            <a href="pdf/halo BCA.pdf" download="HAI BCA Tech competition.pdf"><button>Download PDF</button></a>
+        </section>
+        
+
+        <section id="contact">
+            <h2>Kontak</h2>
+            <p>Email: <a href="mailto:tajulaulia93@gmail.com">tajulaulia93@gmail.com</a></p>
+            <p>Telepon: +62 813 3456 7890</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/TajulAuliaMuda/" target="_blank">linkedin.com/in/TajulAuliaMuda</a></p>
+        </section>
+        <section id="game">
+            <h2>Game</h2>
+            <div class="game-container">
+                <h1>Game Tebak Angka</h1>
+                <p>Saya memilih angka antara 1 dan 100. Bisakah Anda menebaknya?</p>
+                <input type="number" id="guessInput" placeholder="Masukkan tebakan Anda" min="1" max="100">
+                <button id="guessButton">Tebak</button>
+                <p id="resultMessage"></p>
+                <button id="resetButton" style="display: none;">Main Lagi</button>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+<script>
+    document.addEventListener("contextmenu", function(e) {
+        e.preventDefault();
+    });
+
+    document.onkeydown = function(e) {
+      if (e.keyCode == 123) { // F12
+          return false;
+      } else if (e.ctrlKey && e.keyCode == 85) { // Ctrl+U
+          return false;
+      }
+  };
+  </script>  
+</html>
