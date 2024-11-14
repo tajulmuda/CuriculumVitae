@@ -1,3 +1,10 @@
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('CV interaktif siap!');
+    // Tambahkan logika interaktif di sini
+});
+
+// script.js
+
 document.addEventListener('DOMContentLoaded', () => {
     const randomNumber = Math.floor(Math.random() * 100) + 1;
     const guessInput = document.getElementById('guessInput');
