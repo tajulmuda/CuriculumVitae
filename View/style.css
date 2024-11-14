@@ -1,3 +1,75 @@
+/* Main container adjustments for smaller screens */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+    }
+    
+    /* Sidebar items adjustments for mobile */
+    .sidebar .contact-info,
+    .sidebar .skills,
+    .sidebar .weather-widget {
+        text-align: center;
+    }
+    
+    .sidebar img {
+        width: 150px;
+        height: auto;
+    }
+    
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    header h1, header h3 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+    
+    /* Resize table and images in content */
+    section table {
+        width: 100%;
+        font-size: 0.9em;
+    }
+    
+    section img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* For extra small screens like mobile devices */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    header h3 {
+        font-size: 1em;
+    }
+
+    .sidebar ul {
+        font-size: 0.9em;
+    }
+    
+    nav ul li {
+        padding: 5px;
+    }
+
+    /* Hide download button on smaller screens */
+    section a button {
+        display: none;
+    }
+}
+
 html {
     scroll-behavior: smooth; /* Menambahkan smooth scroll */
 }
