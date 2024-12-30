@@ -30,9 +30,16 @@
 }
 
 .right-sidebar {
-    width: 200px; /* Lebar sidebar kanan */
-    background-color: #f4f4f4; /* Warna latar belakang sidebar kanan */
-    padding: 15px;
+    position: fixed;       /* Menetapkan posisi tetap */
+    top: 0;                /* Jarak dari bagian atas layar */
+    left: 0;               /* Jarak dari bagian kiri layar */
+    width: 250px;          /* Lebar sidebar, sesuaikan dengan kebutuhan */
+    height: 100vh;         /* Tinggi penuh sesuai dengan layar */
+    background-color: #f4f4f4; /* Warna latar belakang sidebar */
+    overflow-y: auto;      /* Mengaktifkan scroll jika konten sidebar melebihi tinggi layar */
+    padding: 20px;         /* Padding untuk konten dalam sidebar */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Memberikan bayangan untuk efek 3D */
+    z-index: 1000;
 }  
 
 .contact-info {
