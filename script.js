@@ -36,3 +36,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.onkeydown = function(e) {
+    if (e.keyCode == 123) { // F12
+        return false;
+    } else if (e.ctrlKey && e.keyCode == 85) { // Ctrl+U
+        return false;
+    }
+};
+
+document.addEventListener("contextmenu", function(e) {
+    e.preventDefault(); // Mencegah menu konteks (klik kanan)
+});
+
+// Wait for 3 seconds, then hide splash screen and show the main content
+setTimeout(function() {
+  document.getElementById('splash-screen').classList.add('fade-out');
+
+  // Optional: Remove splash screen completely after fading out
+  setTimeout(function() {
+    document.getElementById('splash-screen').style.display = 'none';
+  }, 1000); // Timeout for fading out effect
+}, 1000); // Splash screen shows for 3 seconds
