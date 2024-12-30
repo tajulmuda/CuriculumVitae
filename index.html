@@ -11,118 +11,18 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <div class="sidebar">
-        <img src="image/foto-Profile.png" alt="Gambar" style="display: block; margin: 0 auto;width: 200px;height: 300px;border-radius: 50%">
-        <ul>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <img src="logo/Phone1.png" alt="Phone" class="contact-icon" />
-                    <span>0813 8477 9571</span>
-                </div>
-                <div class="contact-item">
-                    <img src="logo/Mail1.png" alt="Email" class="contact-icon" />
-                    <span>tajulaulia93@gmail.com</span>
-                </div>
-                <div class="contact-item">
-                    <img src="logo/Linkedin1.png" alt="LinkedIn" class="contact-icon" />
-                    <span>TajulAuliaMuda</span>
-                </div>
-                <div class="contact-item">
-                    <img src="logo/Instagram1.png" alt="Instagram" class="contact-icon" />
-                    <span>@tajulmuda</span>
-                </div>
-            </div>  
-        </ul>
-        <div class="sidebar-header">
-            <span>Skills</span>
-            <div class="separator"></div>
-        </div>
-        <div class="skills">
-            <ul>
-              <li>Communication</li>
-              <li>Linux</li>
-              <li>Teamwork</li>
-              <li>Organization</li>
-              <li>Quality Insurance</li>
-              <li>Log analysis</li>
-              <li>Database (Certificated)</li>
-            </ul>
-        </div>
-        <div class="sidebar-header">
-            <span>Software</span>
-            <div class="separator"></div>
-        </div>
-        <div class="skills">
-            <ul>
-              <li>Intellij IDEA</li>
-              <li>Oracle</li>
-              <li>SQL Server Management</li>
-              <li>Linux</li>
-              <li>Windows</li>
-              <li>Adobe Illustrator</li>
-              <li>Adobe Photoshop</li>
-              <li>Microsoft Office Product</li>
-              <li>MobaXTerm</li>
-              <li>JIRA</li>
-            </ul>
-        </div>
-        <div class="sidebar-header">
-            <span>AWARDS</span>
-            <div class="separator"></div>
-        </div>
-        <div class="skills">
-            <ul>
-              <li>GOLD MEDAL PICF 2016 ( MIXYOUTH )</li>
-              <li>SILVER MEDAL PICF 2016 ( FOKLORE )</li>
-              <li>CHAMPION MALAYSIAN CE  2017 ( MALE CHOIR )</li>
-              <li>GOLD MEDAL MALAYSIAN CE 2017 ( MIXYOUTH )</li>
-              <li>GOLD MEDAL KARANG TURI 2019 ( MIXYOUTH )</li>
-              <li>CHAMPION  KARANG TURI 2019 ( MALE CHOIR )</li>
-            </ul>
-        </div>
-        <div class="sidebar-header">
-            <span>WIDGET</span>
-            <div class="separator"></div>
-        </div>
-        <div class="skills">
-            <ul>
-                <div class="weather-widget">
-                    <h2 style="color: white;">Jakarta Weather</h2>
-                    <img src="" alt="Weather Icon" class="icon">
-                    <div class="temperature" id="temperature" style="color: white;">-- °C</div>
-                    <div class="description" id="description" style="color: white;">Loading...</div>
-                    <div class="error-message" id="error-message" style="color: wheat;">Gagal memuat data cuaca.</div>
-                </div>   
-                <script src="scriptWeather.js"></script>
-            </ul>
-        </div>
-        <div class="sidebar-header">
-            <span>Money Market</span>
-            <div class="separator"></div>
-        </div>
-        <div class="skills">
-            <ul>
-                
-                <h2 style="color: white;">Money Market</h2>
-                <div class="row mt-5">
-                    <div class="col-md-12">
-                        <canvas id="currencyChart" width="400" height="200"></canvas>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <p><strong>USD/IDR:</strong> <span id="usd-rate">Loading...</span></p>
-                        <p><strong>GBP/IDR:</strong> <span id="gbp-rate">Loading...</span></p>
-                        <p><strong>EUR/IDR:</strong> <span id="eur-rate">Loading...</span></p>
-                        <div class="error-message" id="error-message" style="color: wheat;">Gagal memuat data Money.</div>
-                    </div>
-                </div>
-                <script src="scriptKurs.js"></script>
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-            </ul>
-        </div>
+    <div class="splash-screen" id="splash-screen">
+        <h1>Welcome to My CV</h1>
     </div>
-
+    <div id="sidebar-placeholder"></div>
+    <script>
+        fetch('Model/sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebar-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading sidebar:', error));
+    </script>
     <div class="main-content">
         <header>
             <h1 style="text-align: left;">Tajul Aulia Muda S.T</h1>
@@ -139,7 +39,7 @@
             </ul>
         </nav>
 
-        <section id="about">
+        <section id="about" data-aos="fade-up" style="text-align:center; margin-top: 50px;">
             <h2>About Me</h2>
             <p>
                Saya Tajul Aulia Muda mempunyai niat belajar yang besar dan keingintahuan yang
@@ -171,45 +71,56 @@
         <section id="experience">
             <h2>Experience</h2>
             <div class="job">
-                <h3>Support Developer</h3>
-                <p><strong>PT. BERLIAN SISTEM INFORMASI</strong> - September 2019 - Desember 2020</p>
                 <ul>
-                    <li>Membantu sisi aplikasi dan user dalam melakukan reporting sales.</li>
-                    <li>Maintenance device.</li>
-                    <li>Backup dan Update Data sesuai kebutuhan Developer saat itu.</li>
-                </ul>
-            </div>
-            <div class="job">
-                <h3>Support Junior Programmer</h3>
-                <p><strong>PT. SENTRA INOVASI SOLUSINDO</strong> - Juni 2021 - Desember 2021</p>
-                <ul>
-                    <li>pengembangan aplikasi Inventory dan POS</li>
-                    <li>Membantu sisi aplikasi dan user dalam melakukan reporting inventory dan stock opname.</li>
-                    <li>Maintenance device.</li>
-                    <li>Backup dan Update Data sesuai kebutuhan user saat itu.</li>
-                </ul>
-            </div>
-            <div class="job">
-                <h3>IT Engineer</h3>
-                <p><strong>PT. MEDIANUSA PERMANA</strong> - Januari 2022 - Juli 2022</p>
-                <ul>
-                    <li>Membantu dalam mempersiapkan environment.</li>
-                    <li>Pengecekan koneksi database dan port aplikasi.</li>
-                    <li>Melakukan bantuan instalasi connector bank participant.</li>
-                    <li>Testing server setelah instalasi.</li>
-                    <li>Testing server setelah instalasi aplikasi, database dan koneksi surrounding.</li>
-                    <li>pengecekan Report dan lakukan backup pada semua kondisi testing DEV,SIT dan UAT</li>
-                </ul>
-            </div>
-            <div class="job">
-                <h3>IT CONSULTANT</h3>
-                <p><strong>PT. ABHIMATA PERSADA</strong> - Juli 2022 - Present</p>
-                <ul>
-                    <li>Analisa pada software (BI - FAST) dan Capability Network.</li>
-                    <li>Consultasi with management dan departement lain sesuai request user.</li>
-                    <li>Meningkatkan e eciency dengan konsultasi dengan end user dan memprovide innovasi dan solusi.</li>
-                    <li>penggunaan FSD dan TSD penggunaan aplikasi.</li>
-                    <li>melakukan resolve jika terdapat log error,melakukan testing (Quality Insurance).</li>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h3>September 2019 - Desember 2020</h3>
+                            <p>PT. BERLIAN SISTEM INFORMASI</p>
+                            <p>SUPPORT DEVELOPER</p>
+                            <ul>
+                                <li>Support Aplikasi HMS dan Reporting</li>
+                                <li>Backup, Restore and Update Database</li>
+                                <li>Maintenance device.</li>
+                                <li>Testing</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-item">
+                            <h3>Juni 2021 - Desember 2021</h3>
+                            <p>PT. SENTRA INOVASI SOLUSINDO</p>
+                            <p>Support Junior Programmer</p>
+                            <ul>
+                                <li>pengembangan aplikasi Inventory dan POS</li>
+                                <li>Membantu sisi aplikasi dan user dalam melakukan reporting inventory dan stock opname.</li>
+                                <li>Maintenance device.</li>
+                                <li>Backup dan Update Data sesuai kebutuhan user saat itu.</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-item">
+                            <h3>Januari 2022 - Juli 2022</h3>
+                            <p>PT. MEDIANUSA PERMANA</p>
+                            <p>IT Engineer</p>
+                            <ul>
+                                <li>Membantu dalam mempersiapkan environment.</li>
+                                <li>Pengecekan koneksi database dan port aplikasi.</li>
+                                <li>Melakukan bantuan instalasi connector bank participant.</li>
+                                <li>Testing server setelah instalasi.</li>
+                                <li>Testing server setelah instalasi aplikasi, database dan koneksi surrounding.</li>
+                                <li>pengecekan Report dan lakukan backup pada semua kondisi testing DEV,SIT dan UAT</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-item">
+                            <h3>Juli 2022 - Present</h3>
+                            <p>PT. ABHIMATA PERSADA</p>
+                            <p>IT CONSULTANT</p>
+                            <ul>
+                                <li>Analisa pada software (BI - FAST) dan Capability Network.</li>
+                                <li>Consultasi with management dan departement lain sesuai request user.</li>
+                                <li>Meningkatkan efeciency dengan konsultasi dengan end user dan memprovide innovasi dan solusi.</li>
+                                <li>penggunaan FSD dan TSD penggunaan aplikasi.</li>
+                                <li>melakukan resolve jika terdapat log error,melakukan testing (Quality Insurance).</li>
+                            </ul>
+                        </div>
+                    </div>
                 </ul>
             </div>
         </section>
@@ -337,18 +248,6 @@
         </section>
     </div>
     <script src="script.js"></script>
+    
 </body>
-<script>
-    document.addEventListener("contextmenu", function(e) {
-        e.preventDefault();
-    });
-
-    document.onkeydown = function(e) {
-      if (e.keyCode == 123) { // F12
-          return false;
-      } else if (e.ctrlKey && e.keyCode == 85) { // Ctrl+U
-          return false;
-      }
-  };
-  </script>  
 </html>
