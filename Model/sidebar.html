@@ -1,6 +1,5 @@
 <div class="sidebar">
     <img src="image/foto-Profile.png" alt="Gambar" style="display: block; margin: 0 auto;width: 200px;height: 300px;border-radius: 50%">
-    <h3 style="text-align: center;">TAJUL AULIA MUDA</h3>
     <ul>
         <div class="contact-info">
             <div class="contact-item">
@@ -66,6 +65,47 @@
           <li>GOLD MEDAL MALAYSIAN CE 2017 ( MIXYOUTH )</li>
           <li>GOLD MEDAL KARANG TURI 2019 ( MIXYOUTH )</li>
           <li>CHAMPION  KARANG TURI 2019 ( MALE CHOIR )</li>
+        </ul>
+    </div>
+    <div class="sidebar-header">
+        <span>WIDGET</span>
+        <div class="separator"></div>
+    </div>
+    <div class="skills">
+        <ul>
+            <div class="weather-widget">
+                <h2 style="color: white;">Jakarta Weather</h2>
+                <img src="" alt="Weather Icon" class="icon">
+                <div class="temperature" id="temperature" style="color: white;">-- °C</div>
+                <div class="description" id="description" style="color: white;">Loading...</div>
+                <div class="error-message" id="error-message" style="color: wheat;">Gagal memuat data cuaca.</div>
+            </div>   
+            <script src="scriptWeather.js"></script>
+        </ul>
+    </div>
+    <div class="sidebar-header">
+        <span>Money Market</span>
+        <div class="separator"></div>
+    </div>
+    <div class="skills">
+        <ul>
+            
+            <h2 style="color: white;">Money Market</h2>
+            <div class="row mt-5">
+                <div class="col-md-12">
+                    <canvas id="currencyChart" width="400" height="200"></canvas>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <p><strong>USD/IDR:</strong> <span id="usd-rate">Loading...</span></p>
+                    <p><strong>GBP/IDR:</strong> <span id="gbp-rate">Loading...</span></p>
+                    <p><strong>EUR/IDR:</strong> <span id="eur-rate">Loading...</span></p>
+                    <div class="error-message" id="error-message" style="color: wheat;">Gagal memuat data Money.</div>
+                </div>
+            </div>
+            <script src="scriptKurs.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
         </ul>
     </div>
 </div>
